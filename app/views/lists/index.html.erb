@@ -1,0 +1,26 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80);">
+  <div class="container">
+    <h1>Your Movies</h1>
+    <p>Organize your film library</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+<div class = "align-items-center d-flex justify-content-between">
+  <div><h2>Your Lists</h2></div>
+  <div><%=link_to "Create a New List", new_list_path, class: "button"%></div>
+</div>
+<div>
+  <%@lists.each do |list|%>
+  <% unless list.movies[0].nil?%>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.tmdb.org/t/p/w500<%=list.movies[0].poster_url%>)">
+    <%=link_to list.name, list_path(list)%>
+  </div>
+  <%else %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80)">
+      <%=link_to list.name, list_path(list)%>
+    </div>
+    <%end%>
+  <%end%>
+</div>

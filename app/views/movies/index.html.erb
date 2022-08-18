@@ -1,0 +1,16 @@
+<h1>Movies</h1>
+<div class = "container">
+<div class = "row">
+ <% @movies.each do |movie| %>
+ <div class = "card col-3 m-2">
+ <%= image_tag("https://image.tmdb.org/t/p/w500#{movie.poster_url}")%>
+  <div class = "card-body">
+ <%=movie.title%>
+ 
+ <div>Rating: <%= movie.rating%></div>
+ </div>
+ </div>
+<% end %>
+</div>
+
+</div>
