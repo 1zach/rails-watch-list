@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "build.js": "^0.3.0",
+    "webpack-dev-server": "^4.10.0"
   }
 }
