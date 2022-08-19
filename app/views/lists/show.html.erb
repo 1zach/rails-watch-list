@@ -16,7 +16,7 @@
 <%end%>
 
 <%=link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
-<%=link_to "Delete this List", lists_path, data: {
+<%=link_to "Delete this List", lists_path, method: :delete, data: {
 turbo_method: :delete,
 turbo_confirm: "Are you sure?"
 } %>

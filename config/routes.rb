@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   end
 
   delete "bookmarks/:id", to: "bookmarks#destroy"
-  delete "lists/:id", to: "lists#destroy"
+  
 end
